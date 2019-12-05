@@ -1,6 +1,6 @@
-import axios from 'axios'
+import axios from 'axios';
 
-const URL = process.env.NODE_ENV !== 'production'? 'http://localhost:3001/api/persons' : 'http://fullstackopen-env.3x84rpm5xb.eu<-north-1.elasticbeanstalk.com/api/persons';
+const URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3001/api/persons' : 'http://fullstackopen-env.3x84rpm5xb.eu-north-1.elasticbeanstalk.com/api/persons';
 
 async function fetchPersons() {
     const response = await axios.get(URL);
