@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const URL = process.env.NODE_ENV !== 'development' ? 'http://fullstackopen-env.3x84rpm5xb.eu-north-1.elasticbeanstalk.com/api/persons' :'http://localhost:3001/api/persons';
 
+console.log(`Current system set to ${process.env.NODE_ENV}`);
 
 async function fetchPersons() {
     const response = await axios.get(URL);
@@ -25,4 +26,4 @@ export default {
     storePerson,
     deletePerson,
     updatePerson,
-}
+};
