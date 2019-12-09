@@ -9,11 +9,12 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+      "start": "react-scripts start",
+      "start-prod": "NODE_ENV=production react-scripts start",
+     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "eb deploy fullstackopen-osa3-front",
+    "deploy": "npm build --prod && eb deploy fullstackopen-osa3-front",
     "server": "json-server -p3001 db.json"
   },
   "eslintConfig": {
