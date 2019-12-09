@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = process.env.NODE_ENV !== 'development' ? 'http://fullstackopen-osa3-backend.eu-north-1.elasticbeanstalk.com/' : 'http://localhost:3001/api/persons';
+const URL = process.env.NODE_ENV !== 'development' ? 'http://fullstackopen-osa3-backend.eu-north-1.elasticbeanstalk.com/api/persons' : 'http://localhost:3001/api/persons';
 
 console.log(`Current system set to ${process.env.NODE_ENV}`);
 
