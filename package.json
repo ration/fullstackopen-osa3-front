@@ -10,12 +10,12 @@
   },
   "scripts": {
       "start": "react-scripts start",
-      "start-prod": "NODE_ENV=production react-scripts start",
-     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "npm build --prod && eb deploy fullstackopen-osa3-front",
-    "server": "json-server -p3001 db.json"
+      "start-prod": "npm run build && node_modules/.bin/serve -s build -l 3000",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "deploy": "eb deploy fullstackopen-osa3-front",
+      "server": "json-server -p3001 db.json"
   },
   "eslintConfig": {
     "extends": "react-app"
